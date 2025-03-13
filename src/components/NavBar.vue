@@ -1,14 +1,14 @@
 <template>
   <BNavbar v-b-color-mode="'dark'" toggleable="lg" class="my-navbar w-100">
-    <BNavbarBrand to="/my_front/">ESG平台</BNavbarBrand>
+    <BNavbarBrand to="/esg/">ESG平台</BNavbarBrand>
     <BNavbarToggle target="nav-collapse" />
     <BCollapse id="nav-collapse" is-nav>
       <BNavbarNav class="ms-auto p-3">
         <BNavItemDropdown text="esg報告書" right>
-          <BDropdownItem to="/my_front/esg">各別公司esg報告書</BDropdownItem>
+          <BDropdownItem to="/esg/report">各別公司esg報告書</BDropdownItem>
         </BNavItemDropdown>
         <BNavItemDropdown text="分析" right>
-          <BDropdownItem to="/my_front/carbon">溫室氣體排放</BDropdownItem>
+          <BDropdownItem to="/esg/carbon">溫室氣體排放</BDropdownItem>
         </BNavItemDropdown>
       </BNavbarNav>
       <BNavForm class="d-flex search-form">

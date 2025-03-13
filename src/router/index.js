@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
-import esg from "../components/esg/esg.vue";
+import report from "../components/esg/esg.vue";
 import carbon from "../components/esg/carbon.vue";
 
 const routes = [
   {
-    path: "/my_front/",
+    path: "/esg/",
     name: "Home",
     component: () => import("../components/home.vue"),
   },
-  { path: "/my_front/esg", name: "esg", component: esg },
-  { path: "/my_front/carbon", name: "carbon", component: carbon },
+  { path: "/esg/report", name: "report", component: report },
+  { path: "/esg/carbon", name: "carbon", component: carbon },
 ];
 
 const router = createRouter({
