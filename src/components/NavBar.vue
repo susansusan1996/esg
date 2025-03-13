@@ -1,30 +1,20 @@
 <template>
-  <BNavbar
-    v-b-color-mode="'dark'"
-    toggleable="lg"
-    variant="dark"
-    class="my-navbar"
-  >
-    <BNavbarBrand to="/my_front/resume">凰喜的作品集</BNavbarBrand>
+  <BNavbar v-b-color-mode="'dark'" toggleable="lg" class="my-navbar w-100">
+    <BNavbarBrand to="/my_front/">ESG平台</BNavbarBrand>
     <BNavbarToggle target="nav-collapse" />
     <BCollapse id="nav-collapse" is-nav>
-      <BNavbarNav>
-        <BNavItem to="/my_front/resume" @click="refresh">關於我</BNavItem>
-      </BNavbarNav>
-      <BNavbarNav class="ms-auto mb-2 mb-lg-0">
-        <BNavItemDropdown text="遊戲" right>
-          <BDropdownItem to="/my_front/snake">貪吃蛇</BDropdownItem>
-          <BDropdownItem to="/my_front/mario">馬力歐</BDropdownItem>
+      <BNavbarNav class="ms-auto p-3">
+        <BNavItemDropdown text="esg報告書" right>
+          <BDropdownItem to="/my_front/esg">各別公司esg報告書</BDropdownItem>
         </BNavItemDropdown>
-        <BNavItemDropdown text="資料結構學習" right>
-          <BDropdownItem to="/my_front/stack">stack</BDropdownItem>
-          <BDropdownItem to="/my_front/queue">queue</BDropdownItem>
+        <BNavItemDropdown text="分析" right>
+          <BDropdownItem to="/my_front/carbon">溫室氣體排放</BDropdownItem>
         </BNavItemDropdown>
       </BNavbarNav>
-      <!--      <BNavForm class="d-flex">-->
-      <!--        <BFormInput class="me-2" placeholder="Search" />-->
-      <!--        <BButton type="submit" variant="outline-success">Search</BButton>-->
-      <!--      </BNavForm>-->
+      <BNavForm class="d-flex search-form">
+        <BFormInput class="search-input" placeholder="搜尋" />
+        <BButton type="submit" class="search-button">Search</BButton>
+      </BNavForm>
     </BCollapse>
   </BNavbar>
 </template>
@@ -41,8 +31,34 @@ function refresh() {
 
 <style scoped>
 .my-navbar {
-  border-radius: 15px;
-  margin: 10px;
-  padding: 10px;
+  background: linear-gradient(to right, #2f80ed, #56ab2f) !important;
+  border-bottom: none;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.search-button {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: white;
+  margin-left: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.search-button:hover {
+  background: #d48806;
+  border-color: #d48806;
 }
 </style>
