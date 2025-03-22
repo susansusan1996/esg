@@ -1,6 +1,6 @@
 <template>
   <BNavbar v-b-color-mode="'dark'" toggleable="lg" class="my-navbar w-100">
-    <BNavbarBrand to="/esg/">ESG平台</BNavbarBrand>
+    <BNavbarBrand to="/esg/">ESG助理</BNavbarBrand>
     <BNavbarToggle target="nav-collapse" />
     <BCollapse id="nav-collapse" is-nav>
       <BNavbarNav class="ms-auto p-3">
