@@ -1,5 +1,6 @@
 啟動: npm run dev
 部版:
+rm dist
 npm run build
 npx gh-pages -d dist
 
